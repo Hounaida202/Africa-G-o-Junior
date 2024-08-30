@@ -12,7 +12,7 @@ CREATE TABLE pays
   langue VARCHAR(255),
   population INT,
   continent_id INT,
-  PRIMARY KEY (pays_id),
+   PRIMARY KEY (pays_id),
   FOREIGN KEY(continent_id) REFERENCES continent(continent_id) ON DELETE CASCADE
   
 );
@@ -73,7 +73,25 @@ INSERT INTO ville (`ville_id`, `nom`, `type`, `pays_id`) VALUES
 (17, 'Kampala', 'Capitale', 17),
 (18, 'Harare', 'Capitale', 18),
 (19, 'Tripoli', 'Capitale', 19),
-(20, 'Djamena', 'Capitale', 20)
+(20, 'Casablanca', 'Autre', 1),
+(21, 'Johannesburg', 'Autre', 2),
+(22, 'Giiza', 'Autre', 3),
+(23, 'Saint-Louis', 'Autre', 4),
+(24, 'Nosy Be', 'Autre', 5),
+(25, 'Mombasa', 'Autre', 6),
+(26, 'Lagos', 'Autre', 7),
+(27, 'Addis-Abeba', 'Autre', 8),
+(28, 'Dar es Salaam', 'Autre', 9),
+(29, 'Kigali', 'Autre', 10),
+(30, 'Accra', 'Autre', 11),
+(31, 'Dodoma', 'Autre', 12),
+(32, 'Hargeisa', 'Autre', 13),
+(33, 'Luanda', 'Autre', 14),
+(34, 'Douala', 'Autre', 15),
+(35, 'Abidjan', 'Autre', 16),
+(36, 'Kampala', 'Autre', 17),
+(37, 'Harare', 'Autre', 18),
+(38, 'Benghazi', 'Autre', 19)
 ;
 
 -- update
@@ -101,4 +119,6 @@ SELECT
 FROM pays
 INNER JOIN continent ON pays.continent_id = continent.continent_id
 WHERE continent.nom = 'Africa';
+
+
 
