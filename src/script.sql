@@ -25,3 +25,6 @@ CREATE TABLE ville
   PRIMARY KEY (ville_id),
   FOREIGN KEY(pays_id) REFERENCES pays(pays_id)
 );
+
+INSERT INTO continent (`continent_id`, `nom`) VALUES
+(1, 'Africa');
