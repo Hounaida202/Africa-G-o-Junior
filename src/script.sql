@@ -91,4 +91,14 @@ WHERE pays_id = 20;
 DELETE FROM ville
 WHERE pays_id = 20;
 
+-- l'affichage
+
+SELECT 
+ pays.nom AS pays, 
+ pays.langue AS langue, 
+ pays.population AS population, 
+  continent.nom AS continent
+FROM pays
+INNER JOIN continent ON pays.continent_id = continent.continent_id
+WHERE continent.nom = 'Africa';
 
