@@ -13,7 +13,7 @@ CREATE TABLE pays
   population INT,
   continent_id INT,
   PRIMARY KEY (pays_id),
-  FOREIGN KEY(continent_id) REFERENCES continent(continent_id)
+  FOREIGN KEY(continent_id) REFERENCES continent(continent_id) ON DELETE CASCADE
   
 );
 CREATE TABLE ville
@@ -23,7 +23,7 @@ CREATE TABLE ville
   type VARCHAR(255),
   pays_id INT,
   PRIMARY KEY (ville_id),
-  FOREIGN KEY(pays_id) REFERENCES pays(pays_id)
+  FOREIGN KEY(pays_id) REFERENCES pays(pays_id) ON DELETE CASCADE
 );
 
 INSERT INTO continent (`continent_id`, `nom`) VALUES
@@ -75,3 +75,20 @@ INSERT INTO ville (`ville_id`, `nom`, `type`, `pays_id`) VALUES
 (19, 'Tripoli', 'Capitale', 19),
 (20, 'Djamena', 'Capitale', 20)
 ;
+
+-- update
+UPDATE ville
+SET nom = 'nottripoli'
+WHERE ville_id=19;
+
+UPDATE pays
+SET population=40000000
+WHERE pays_id=1;
+-- la supprission d'un pays et d'une ville
+DELETE FROM pays
+WHERE pays_id = 20;
+
+DELETE FROM ville
+WHERE pays_id = 20;
+
+
