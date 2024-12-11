@@ -16,3 +16,12 @@ CREATE TABLE pays
   FOREIGN KEY(continent_id) REFERENCES continent(continent_id)
   
 );
+CREATE TABLE ville
+(
+  ville_id INT,
+  nom VARCHAR(255),
+  type VARCHAR(255),
+  pays_id INT,
+  PRIMARY KEY (ville_id),
+  FOREIGN KEY(pays_id) REFERENCES pays(pays_id)
+);
