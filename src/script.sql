@@ -52,3 +52,26 @@ VALUES
 (19, 'Libya', 'Arabe', 6900000, 1),
 (20, 'Chad', 'Arabe', 18300000, 1)
 ;
+
+INSERT INTO ville (`ville_id`, `nom`, `type`, `pays_id`) VALUES
+(1, 'Rabat', 'Capitale', 1),
+(2, 'Pretoria', 'Capitale', 2),
+(3, 'Cairo', 'Capitale', 3),
+(4, 'Dakar', 'Capitale', 4),
+(5, 'Antananarivo', 'Capitale', 5),
+(6, 'Nairobi', 'Capitale', 6),
+(7, 'Abuja', 'Capitale', 7),
+(8, 'Khortoum', 'Capitale', 8),
+(9, 'Abuja', 'Capitale', 9),
+(10, 'Abuja', 'Capitale', 10),
+(11, 'Accra', 'Capitale', 11),
+(12, 'Dodoma', 'Capitale', 12),
+(13, 'Mogadiscio', 'Capitale', 13),
+(14, 'Luanda', 'Capitale', 14),
+(15, 'Yaoundé', 'Capitale', 15),
+(16, 'Yamoussoukro', 'Capitale', 16),
+(17, 'Kampala', 'Capitale', 17),
+(18, 'Harare', 'Capitale', 18),
+(19, 'Tripoli', 'Capitale', 19),
+(20, 'Djamena', 'Capitale', 20)
+;
